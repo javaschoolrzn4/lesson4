@@ -22,8 +22,5 @@ public class Test {
 		
 		
 	}
-	public void pl() {
-		System.out.println("123");
-	}
 }
 

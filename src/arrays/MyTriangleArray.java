@@ -27,12 +27,9 @@ public class MyTriangleArray {
 	}
 	
 	private static String doubleDemisionToString(String[] args){
-		String resultString = "";
+		
 		Arrays.sort(args);
-		String[][] arrStr = convertToArray(args);
-		for (String[] anArrStr : arrStr) {
-			resultString += Arrays.toString(anArrStr);
-		}
+		String resultString = Arrays.toString(convertToArray(args));
 		return resultString;
 		
 	}

@@ -12,7 +12,6 @@ public class House implements Comparable<House>{
 		this.price = price;
 		this.city = city;
 		this.hasFurniture = hasFurniture;
-		this.printRes();
 	}
 	
 	@Override
@@ -28,27 +27,12 @@ public class House implements Comparable<House>{
 	
 	public int compareTo(House anotherHouse)
 	{
-		return Integer.compare(this.area, anotherHouse.area);
-	}
-
-	class A {
-		public int n = 1;
-		public int getInt() {
+		if (this.area == anotherHouse.area) {
+			return 0;
+		} else if (this.area < anotherHouse.area) {
+			return -1;
+		} else {
 			return 1;
 		}
 	}
-	class  B extends A {
-		public int n = 2;
-		public int getInt() {
-			return 2;
-		}
-	}
-
-	public void printRes() {
-		A a = new B();
-		System.out.println(a.getInt());
-		System.out.println(a.n);
-	}
-
-
 }
